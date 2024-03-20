@@ -16,18 +16,37 @@ public class Rabbit implements Serializable {
     @Column(name = "price")
     private int price;
 
+    @Column(name = "quantity")
+    private int quantity;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    public Rabbit(String name, String theme, int price){
+    public Rabbit(String name, String theme, int price, int quantity){
         this.name = name;
         this.theme = theme;
         this.price = price;
+        this.quantity = quantity;
     }
 
     public Rabbit(){
 
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public void purchaseRabbit(){
+        if (getQuantity() > 0){
+            setQuantity(getQuantity()-1);
+        }
+        System.out.println("Sorry, out of stock!");
     }
 
     public String getName() {
