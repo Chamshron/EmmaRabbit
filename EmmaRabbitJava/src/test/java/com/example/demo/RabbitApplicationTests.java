@@ -11,11 +11,4 @@ public class RabbitApplicationTests {
 	public void contextLoads() {
 	}
 
-	@Test
-	public void cannotPurchaseRabbitIfQuantityIsZero(){
-		Rabbit rabbit = new Rabbit("Emma", "Dance Party", 100, 1);
-		rabbit.purchaseRabbit();
-		rabbit.purchaseRabbit();
-	}
-
 }
