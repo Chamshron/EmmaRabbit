@@ -1,9 +1,12 @@
 package dev.emma.rabbits;
 
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.ObjectInput;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class RabbitService {
@@ -12,4 +15,8 @@ public class RabbitService {
     public List<Rabbit> getAllRabbits(){
         return rabbitRepository.findAll();
     }
+
+    public Optional<Rabbit> getOneRabbit(ObjectId id){
+        return rabbitRepository.findById(id);
+    };
 }
