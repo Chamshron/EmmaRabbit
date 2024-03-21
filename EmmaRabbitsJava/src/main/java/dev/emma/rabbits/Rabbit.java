@@ -16,5 +16,5 @@ public class Rabbit {
     private String name;
     private String odds;
 
-    
+
 }
