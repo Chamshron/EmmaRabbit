@@ -1,13 +1,13 @@
-package com.example.demo;
+package dev.emma.rabbits;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RabbitApplication {
+public class RabbitsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RabbitApplication.class, args);
+		SpringApplication.run(RabbitsApplication.class, args);
 	}
 
 }
