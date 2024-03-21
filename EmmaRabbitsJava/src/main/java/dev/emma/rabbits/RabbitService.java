@@ -16,7 +16,7 @@ public class RabbitService {
         return rabbitRepository.findAll();
     }
 
-    public Optional<Rabbit> getOneRabbit(ObjectId id){
-        return rabbitRepository.findById(id);
+    public Optional<Rabbit> getOneRabbit(String name){
+        return rabbitRepository.findRabbitByName(name);
     };
 }

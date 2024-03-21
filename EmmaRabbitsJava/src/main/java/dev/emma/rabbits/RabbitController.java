@@ -19,8 +19,8 @@ public class RabbitController {
         return new ResponseEntity<List<Rabbit>>(rabbitService.getAllRabbits(), HttpStatus.OK);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Optional<Rabbit>> getOneRabbit(@PathVariable ObjectId id){
-        return new ResponseEntity<Optional<Rabbit>>(rabbitService.getOneRabbit(id), HttpStatus.OK);
+    @GetMapping("/{name}")
+    public ResponseEntity<Optional<Rabbit>> getOneRabbit(@PathVariable String name){
+        return new ResponseEntity<Optional<Rabbit>>(rabbitService.getOneRabbit(name), HttpStatus.OK);
     }
 }
