@@ -8,5 +8,6 @@ MVP:
  * User should be able to check whether or not they have gotten a certain figure as part of the series
 
  Next steps:
-  * I would like to use a Java template 
+  * Back-end wise, I would like to use a Java template and make the Rabbit class more complex, potentially having a tracker for what percentage of a certain series and overall I have obtained of the collectable figures
+  * Front-end wise, I would like to use TailWindCSS and some animation it astectically pleasing. 
 
