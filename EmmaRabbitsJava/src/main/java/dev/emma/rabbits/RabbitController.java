@@ -23,4 +23,8 @@ public class RabbitController {
     public ResponseEntity<Optional<Rabbit>> getOneRabbit(@PathVariable String name){
         return new ResponseEntity<Optional<Rabbit>>(rabbitService.getOneRabbit(name), HttpStatus.OK);
     }
+
+    //Put mapping here
+
+    //Post mapping here
 }
