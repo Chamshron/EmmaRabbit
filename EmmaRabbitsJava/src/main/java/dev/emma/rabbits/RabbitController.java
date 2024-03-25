@@ -20,16 +20,16 @@ public class RabbitController {
         return new ResponseEntity<List<Rabbit>>(rabbitService.getAllRabbits(), HttpStatus.OK);
     }
 
-    @GetMapping("/{name}")
-    public ResponseEntity<Optional<Rabbit>> getOneRabbit(@PathVariable String name){
-        return new ResponseEntity<Optional<Rabbit>>(rabbitService.getOneRabbit(name), HttpStatus.OK);
+    @GetMapping("/{ObjectId}")
+    public ResponseEntity<Optional<Rabbit>> getOneRabbit(@PathVariable ObjectId ObjectId){
+        return new ResponseEntity<Optional<Rabbit>>(rabbitService.getOneRabbit(ObjectId), HttpStatus.OK);
     }
 
 
     //I want to update a True/False on whether I have obtained this specific figurine, update no other values
-    @PutMapping("/{name}")
-    public ResponseEntity<Optional<Rabbit>> updateOwnedRabbit (@PathVariable String name, @RequestBody Rabbit updatedRabbit){
-        Optional<Rabbit> existingRabbitOptional = rabbitService.getOneRabbit(name);
+    @PutMapping("/{ObjectId}")
+    public ResponseEntity<Optional<Rabbit>> updateOwnedRabbit (@PathVariable ObjectId ObjectId, @RequestBody Rabbit updatedRabbit){
+        Optional<Rabbit> existingRabbitOptional = rabbitService.getOneRabbit(ObjectId);
 
         if(existingRabbitOptional.isPresent()){
             Rabbit existingRabbit = existingRabbitOptional.get();

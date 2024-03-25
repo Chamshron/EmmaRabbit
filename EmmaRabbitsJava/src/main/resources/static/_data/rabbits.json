@@ -1,0 +1,62 @@
+[
+    {
+        "series":"EMMA Secret Forest Dim Lights",
+        "name":"Butterfly's Love for Flowers",
+        "odds":"1/8",
+        "owned": false
+    },
+    {
+        "series":"EMMA Secret Forest Dim Lights",
+        "name": "River Lamp",
+        "odds":"1/8",
+        "owned": false
+    },
+    {
+        "series":"EMMA Secret Forest Dim Lights",
+        "name": "Rabbit Lamp",
+        "odds":"1/8",
+        "owned": true
+    },
+    {
+        "series":"EMMA Secret Forest Dim Lights",
+        "name": "Rites and Music",
+        "odds":"1/8",
+        "owned": false
+    },
+    {
+        "series":"EMMA Secret Forest Dim Lights",
+        "name": "Admire the Moon",
+        "odds":"1/8",
+        "owned": true
+    },
+    {
+        "series":"EMMA Secret Forest Dim Lights",
+        "name": "LiYuan Opera",
+        "odds":"1/8",
+        "owned": false
+    },
+    {
+        "series":"EMMA Secret Forest Dim Lights",
+        "name": "Colorful Drum",
+        "odds":"1/8",
+        "owned": false
+    },
+    {
+        "series":"EMMA Secret Forest Dim Lights",
+        "name": "Fireworks",
+        "odds":"1/8",
+        "owned": true
+    },
+    {
+        "series":"EMMA Secret Forest Dim Lights",
+        "name": "Palace Lantern",
+        "odds": "1/96",
+        "owned": false
+    },
+    {
+        "series":"EMMA Secret Forest Dim Lights",
+        "name": "Carp Lamp",
+        "odds":"1/192",
+        "owned": false
+    }
+]
