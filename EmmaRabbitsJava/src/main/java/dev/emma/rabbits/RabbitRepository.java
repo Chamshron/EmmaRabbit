@@ -12,6 +12,6 @@ import java.util.Optional;
 public interface RabbitRepository extends MongoRepository<Rabbit, ObjectId> {
     Optional<Rabbit> findRabbitByName(String name);
 
-    Rabbit findByNameRabbit(String name);
+
 
 }

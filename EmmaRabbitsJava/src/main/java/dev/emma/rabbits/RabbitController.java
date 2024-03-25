@@ -14,6 +14,7 @@ import java.util.Optional;
 public class RabbitController {
     @Autowired
     private RabbitService rabbitService;
+    private  RabbitRepository rabbitRepository;
     @GetMapping
     public ResponseEntity<List<Rabbit>> getAllRabbits(){
         return new ResponseEntity<List<Rabbit>>(rabbitService.getAllRabbits(), HttpStatus.OK);
@@ -25,13 +26,26 @@ public class RabbitController {
     }
 
 
-    //I want to update a True/False on whether I have obtained this specific figurine
+    //I want to update a True/False on whether I have obtained this specific figurine, update no other values
     @PutMapping("/{name}")
-    public ResponseEntity<Rabbit> updateOneRabbit(@PathVariable String name, @RequestBody Rabbit updatedRabbit){
-        Rabbit existingRabbit = rabbitService.getRabbitByName(name);
+    public ResponseEntity<Optional<Rabbit>> updateOwnedRabbit (@PathVariable String name, @RequestBody Rabbit updatedRabbit){
+        Optional<Rabbit> existingRabbitOptional = rabbitService.getOneRabbit(name);
 
-        existingRabbit.setName(updatedRabbit.getName());
-        existingRabbit.setOdds(updatedRabbit.getOdds());
+        if(existingRabbitOptional.isPresent()){
+            Rabbit existingRabbit = existingRabbitOptional.get();
+            existingRabbit.setOwned(updatedRabbit.getOwned());
+            existingRabbit.setOdds(existingRabbit.getOdds());
+            existingRabbit.setName(existingRabbit.getName());
+            existingRabbit.setSeries(existingRabbit.getSeries());
+            existingRabbit.setId(existingRabbit.getId());
+
+            return new ResponseEntity<Optional<Rabbit>>(Optional.of(existingRabbit), HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
+
+
     }
 
 }

@@ -20,5 +20,5 @@ public class RabbitService {
         return rabbitRepository.findRabbitByName(name);
     };
 
-    public Rabbit getRabbitByName(String name){ return rabbitRepository.findByNameRabbit(name);};
+
 }
