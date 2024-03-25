@@ -15,6 +15,15 @@ public class Rabbit {
     private String series;
     private String name;
     private String odds;
+    private Boolean owned;
+
+    public Boolean getOwned() {
+        return owned;
+    }
+
+    public void setOwned(Boolean owned) {
+        this.owned = owned;
+    }
 
     public ObjectId getId() {
         return id;

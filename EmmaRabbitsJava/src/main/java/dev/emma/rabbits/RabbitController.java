@@ -24,7 +24,14 @@ public class RabbitController {
         return new ResponseEntity<Optional<Rabbit>>(rabbitService.getOneRabbit(name), HttpStatus.OK);
     }
 
-    //Put mapping here
 
-    //Post mapping here
+    //I want to update a True/False on whether I have obtained this specific figurine
+    @PutMapping("/{name}")
+    public ResponseEntity<Rabbit> updateOneRabbit(@PathVariable String name, @RequestBody Rabbit updatedRabbit){
+        Rabbit existingRabbit = rabbitService.getRabbitByName(name);
+
+        existingRabbit.setName(updatedRabbit.getName());
+        existingRabbit.setOdds(updatedRabbit.getOdds());
+    }
+
 }
