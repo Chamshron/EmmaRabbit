@@ -26,7 +26,7 @@ public class RabbitController {
     }
 
 
-    //I want to update a True/False on whether I have obtained this specific figurine, update no other values
+    //I want to update a True/False on whether I have obtained this specific figurine, update no other values. This code needs to be improved as it is erroring for no obvious reason
     @PutMapping("/{ObjectId}")
     public ResponseEntity<Optional<Rabbit>> updateOwnedRabbit (@PathVariable String name, @RequestBody Rabbit updatedRabbit){
         Optional<Rabbit> existingRabbitOptional = rabbitService.getOneRabbit(name);
