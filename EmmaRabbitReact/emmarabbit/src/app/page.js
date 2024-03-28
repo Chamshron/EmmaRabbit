@@ -1,11 +1,14 @@
-import Image from "next/image";
+import Intro from "../../components/intro";
+
+import localFont from '@next/font/local'
+const myFont = localFont(
+  {src: '../../public/fonts/STARFLOWER.otf'},
+  )
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <h1 className="">Welcome to My Rabbits</h1>
-      </div>
+    <main className=" flex flex-col items-center px-4 pb-[5000px] mt-10">
+      <Intro />
     </main>
   );
 }
