@@ -1,5 +1,6 @@
 "use client";
 import React, {useEffect, useState} from "react";
+import Rabbit from "@/components/Rabbit";
 
 const RabbitContainer = () => {
     const [rabbits, setRabbits] = useState([]);
@@ -11,19 +12,25 @@ const RabbitContainer = () => {
     },[])
 
     return(
-        <span>
-            <p className=" mt-10 font-bold">Here is where the rabbits will be listed</p>
-                <ul>
+        <section className=" scroll-mt-12 mb-28">
+                {/* <ul className="">
                     {rabbits.map((rabbit, index) => (
                         <li 
                         key={index}
-                        className=" font-bold"
+                        className=""
                         >
-                            {rabbit.name} 
+                         {rabbit.name}   
                         </li>
                     ))}
-                </ul>
-        </span>
+                </ul> */}
+                <div>
+                    {rabbits.map((rabbit,index) => (
+                        <React.Fragment key={index}>
+                            <Rabbit rabbit={rabbit}/>
+                        </React.Fragment>
+                    ))}
+                </div>
+        </section>
     )
 }
 export default RabbitContainer;
