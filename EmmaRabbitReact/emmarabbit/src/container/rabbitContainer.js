@@ -23,7 +23,7 @@ const RabbitContainer = () => {
                         </li>
                     ))}
                 </ul> */}
-                <div>
+                <div className=" mt-10">
                     {rabbits.map((rabbit,index) => (
                         <React.Fragment key={index}>
                             <Rabbit rabbit={rabbit}/>
