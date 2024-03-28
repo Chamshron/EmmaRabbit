@@ -1,3 +1,4 @@
+import RabbitContainer from "@/container/rabbitContainer";
 import Intro from "../../components/intro";
 
 import localFont from '@next/font/local'
@@ -9,6 +10,7 @@ export default function Home() {
   return (
     <main className=" flex flex-col items-center px-4 pb-[5000px] mt-10">
       <Intro />
+      <RabbitContainer/>
     </main>
   );
 }
