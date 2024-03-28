@@ -1,5 +1,6 @@
 import RabbitContainer from "@/container/rabbitContainer";
-import Intro from "../../components/intro";
+import Intro from "../components/intro";
+
 
 import localFont from '@next/font/local'
 const myFont = localFont(
