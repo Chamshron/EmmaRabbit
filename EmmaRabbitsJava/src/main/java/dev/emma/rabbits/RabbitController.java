@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/rabbits")
+@RequestMapping("/rabbits")
 public class RabbitController {
     @Autowired
     private RabbitService rabbitService;
